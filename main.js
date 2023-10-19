@@ -1,4 +1,4 @@
-let element = document.querySelector('.tilt'); // ou document.getElementById('tilt')
+let element = document.querySelectorAll('.card'); // ou document.getElementById('tilt')
 VanillaTilt.init(element, {
   max: 25, // ângulo máximo de inclinação (em graus)
   speed: 400, // velocidade da transição (em milissegundos)
