@@ -87,7 +87,7 @@ main {
   font-size: 16px;
 }
 
-.search button {
+button {
   background-color: var(--laranja);
   color: var(--cinza);
   border: none;
@@ -135,7 +135,7 @@ ul {
 }
 
 ul li::before {
-  content: '\2022';
+  content: "\2022";
   margin: 0 2px;
   color: #eb5e28;
   font-size: 1.1em;
