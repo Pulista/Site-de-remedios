@@ -5,38 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playpen+Sans:wght@300;600;800&family=Poppins:wght@300;400;500;600;700;800&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
     <title>Lista de Remédios</title>
   </head>
   <body>
-    <h1>Lista de remédios</h1>
-    <!--barra de busca-->
-    <div class="search">
-      <input type="text" placeholder="Pesquisar remédios" />
-      <button>Buscar</button>
+    <div class="header">
+      <h1>Lista de Remédios</h1>
+      <!--barra de busca-->
+      <div class="search">
+        <input type="text" placeholder="Pesquisar remédios" />
+        <button>Buscar</button>
+      </div>
     </div>
     <main>
       <section class="medicine">
         <div class="card" data-tilt>
           <img src="imagens/dorflex.jpg" alt="Dorflex" />
         </div>
-        <h2>Dorflex</h2>
-        <p>
-          Dorflex é indicado no alívio da dor associada a contraturas
-          musculares, incluindo dor de cabeça tensional.
-        </p>
-        <p><strong>Composição:</strong> 300 mg de dipirona monoidratada, 35 mg de citrato de orfenadrina (equivalente a 20,4 mg de orfenadrina base) e 50 mg de cafeína anidra.</p>
-        <p><strong>Como funciona:</strong> Dorflex possui ação analgésica e relaxante muscular. O início da ação ocorre a partir de 30 minutos.</p>
+        <h2><a href="#" id="abrirPop">Dorflex</a></h2>
+        <dialog id="popup">
+          <p>
+            Dorflex é indicado no alívio da dor associada a contraturas
+            musculares, incluindo dor de cabeça tensional.
+          </p>
+          <p>
+            <strong>Composição:</strong> 300 mg de dipirona monoidratada, 35 mg
+            de citrato de orfenadrina (equivalente a 20,4 mg de orfenadrina
+            base) e 50 mg de cafeína anidra.
+          </p>
+          <p>
+            <strong>Como funciona:</strong> Dorflex possui ação analgésica e
+            relaxante muscular. O início da ação ocorre a partir de 30 minutos.
+          </p>
+          <button id="fecharPop">Fechar</button>
+        </dialog>
       </section>
 
-      <section class="medicine">
-        <div class="card" data-tilt>
-          <img src="imagens/flanax.jpg" alt="Flanax" />
-        </div>
-        <h2>Remédio 2</h2>
-        <p>Descrição do Remédio 2</p>
-        <p>Composição: Ingredientes do Remédio 2</p>
-        <p>Recomendação: Recomendação para o Remédio 2</p>
-      </section>
+
     </main>
 
     <script src="main.js"></script>

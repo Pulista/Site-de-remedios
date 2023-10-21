@@ -1,23 +1,41 @@
+:root {
+  --laranja: #eb5e28;
+  --cinza: #403d38;
+  --branco: #f8f7f3;
+  --cinza-claro: #575450;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: var(--branco);
+  color: var(--cinza);
   margin: 0;
   padding: 0;
 }
 
-h1 {
-  text-align: center;
+.header {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
 }
 
-h2, strong {
-    color: #007bff;
+.header h1 {
+  color: var(--laranja);
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+a {
+  font-family: "Inter", sans-serif;
+  font-size: 32px bold;
+  color: var(--laranja);
+  text-decoration: underline;
+  text-decoration-thickness: 11%;
+  text-underline-offset: 0.5em;
+}
+
+strong {
+  color: var(--laranja);
 }
 
 main {
@@ -50,24 +68,52 @@ main {
 }
 
 .search input {
-  padding: 10px;
+  background: url(imagens/lupa.png) no-repeat left center;
+  background-size: 20px 20px;
+  padding: 10px 30px 10px 30px;
   width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 3px solid var(--cinza-claro);
+  border-radius: 50px;
   font-size: 16px;
 }
 
 .search button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--laranja);
+  color: var(--cinza);
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   font-size: 16px;
   margin-left: 10px;
 }
 
 .search button:hover {
-  background-color: #0056b3;
+  background-color: #ff4800;
+}
+
+/* Estilo para o pop-up */
+
+.popup-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
+}
+
+.medicine:hover .popup-content {
+  display: block;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.5);
+}
+
+dialog {
+  border: 0;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em rgb(0 0 0 / 0.4);
+  width: 80%;
 }
