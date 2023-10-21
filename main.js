@@ -8,14 +8,18 @@ VanillaTilt.init(element, {
 
 //pop-up
 
-const abrirPop = document.getElementById("abrirPop");
-const popup = document.getElementById("popup");
-const fecharPop = document.getElementById("fecharPop");
+const abrirPops = document.querySelectorAll(".abrirPop");
+const popups = document.querySelectorAll(".popup");
+const fecharPops = document.querySelectorAll(".fecharPop");
 
-abrirPop.addEventListener("click", function () {
-  popup.showModal();
+abrirPops.forEach(function (abrirPop, index) {
+  abrirPop.addEventListener("click", function () {
+    popups[index].showModal();
+  });
 });
 
-fecharPop.addEventListener("click", function () {
-  popup.close();
+fecharPops.forEach(function (fecharPop, index) {
+  fecharPop.addEventListener("click", function () {
+    popups[index].close();
+  });
 });
